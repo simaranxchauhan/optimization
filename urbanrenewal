@@ -1,0 +1,26 @@
+If the goal is to maximize the annual revenue, the LP is: 
+
+Max = 7000*L+12000*M+20000*U+5000*P+15000*R-10000*S-7000*C;
+[Land] .05*L + .07*M + .03*U + .025*P + .045*S + .1*R < .85*50 + .85*(.25*C);
+[Retail] .023*L + .034*M + .046*U + .023*P + .034*S – R >0;
+[Classrooms] 1.3*L + 1.2*M +.5*U + 1.4*P -25*S < 0;
+L>100;
+M>125;
+U>75;
+P>300;
+L<200;
+M<190;
+U<260;
+P<600;
+R<25;
+S<2/.045;
+
+Where: 
+  L = # of Low income units built 
+  M = # of Medium income units built 
+  U = # of Upper income units built 
+  P = # of Public housing units built 
+  R = # of Retail units 
+  S = # of School classrooms  
+  C = # of Condemned units purchased for the development 
+//(Note that this model allows for factional numbers of each type of unit, including classrooms.) 
