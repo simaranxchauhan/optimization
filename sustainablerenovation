@@ -1,0 +1,27 @@
+Here is how we solved the LP: 
+Let A: amount of STC panels installed 
+Let B: amount of PV panels installed
+Let C: amount LED lights replaced 
+Let D: amount of CHP units installed 
+Let E: units of building insulation placed 
+
+For part I: 
+Objective Function:
+300A + 70B + 5C + 1600D + 0.4E; maximize
+Constraints: 
+A + B < 200 //panels must be less than 200m^2 
+C < 800 //max amt of LEDs replaced allowed is 800 
+D < 100kWe //largest sensible cogeneration plant is 100kWe 
+450A + 17500D + 2.25E < 91,500kWht/year //max thermal load to satisfy 
+
+For part II: 
+Objective Function: 
+(57n - 860)A + (46n - 350)B + (2.3n - 11.5)C + (780n - 2300)D + (0.24n - 1)E, 
+where n is the number of years (in this case n = 5, n = 20); maximize
+Constraints: 
+A + B < 200 //panels must be less than 200m^2 
+C < 800 //max amt of LEDs replaced allowed is 800 
+D < 100kWe //largest sensible cogeneration plant is 100kWe 
+450A + 17500D + 2.25E > 91,500kWht/year //max thermal load to satisfy
+300A + 70B + 5C + 1600D + 0.4E > (64266.67CO2 kg/year avoided)*(%factor), 
+where the %factor is 50%, 75%, and 95% amounts you aim to meet.
